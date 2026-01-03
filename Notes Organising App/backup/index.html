@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Notes App</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen py-12 px-4 bg-cover bg-center bg-fixed bg-no-repeat relative">
+    <!-- Overlay for better text readability if needed, or just the image -->
+    <div class="max-w-[600px] mx-auto relative z-10">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl text-gray-800 mb-2 font-medium">My Notes</h1>
+            <p class="text-gray-600">Keep track of your thoughts and ideas</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="mb-8 bg-white rounded-lg shadow-md p-6">
+            <textarea id="note-input"
+                class="w-full h-36 p-4 border-2 border-gray-200 rounded-lg resize-none focus:outline-none focus:border-indigo-400 transition-colors"
+                placeholder="Write your note here..."></textarea>
+
+            <div id="error-message" class="hidden text-red-500 mt-2 text-sm flex items-center gap-1">
+                <span>⚠</span> Note cannot be empty
+            </div>
+
+            <button id="add-btn"
+                class="mt-4 px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 shadow-sm hover:shadow-md transition-all font-medium">
+                Add Note
+            </button>
+        </div>
+
+        <div id="notes-list" class="space-y-4">
+            <!-- Notes will appear here -->
+        </div>
+
+        <!-- Empty State (Hidden by default, toggled in JS if needed or just omitted if not in vanilla logic yet) -->
+        <!-- We will handle empty state in JS logic if we want to mimic the React app fully, but for now just the structure -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
