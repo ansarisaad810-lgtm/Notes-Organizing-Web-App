@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Notes App</title>
+
+    <!-- Tailwind CSS CDN (used only for utility sizing like logo) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="images/logo.png" alt="Notes App Logo" class="mx-auto mb-0 w-36 h-36 object-contain" />
+
+            <h1 class="title">My Notes</h1>
+            <p class="subtitle">Keep track of your thoughts and ideas</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="input-card">
+            <textarea id="note-input" class="note-textarea" placeholder="Write your note here..."></textarea>
+
+            <div id="error-message" class="error-message hidden">
+                <span>⚠</span> Note cannot be empty
+            </div>
+
+            <button id="add-btn" class="primary-btn">
+                Add Note
+            </button>
+        </div>
+
+        <!-- Notes List -->
+        <div id="notes-list" class="notes-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
